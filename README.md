@@ -39,5 +39,7 @@ During the development of this weather app, I learned and applied the following 
 - Handling API requests and responses: I learned how to make HTTP requests to an external API and process the responses to extract the relevant data.
 - Webpack and Babel setup: I configured Webpack with Babel to transpile my modern JavaScript code, ensuring compatibility with older browsers.
 - Code quality and linting: I integrated ESLint into my development workflow to catch potential errors and enforce consistent coding standards.
-- Acknowledgements
+
+## Acknowledgements
+
 - I would like to express my gratitude to the developers and maintainers of the weather API I used in this project. Their API provided valuable data for the weather forecasts, making this project possible.
