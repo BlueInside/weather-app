@@ -1,4 +1,4 @@
 import './styles/style.css';
 import { getWeather } from './weather';
 
-getWeather();
+getWeather().catch((error) => console.log(error));
