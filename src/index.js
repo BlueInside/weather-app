@@ -1,9 +1,4 @@
 import './styles/style.css';
+import { getWeather } from './weather';
 
-console.log('Hello webpack');
-
-const sayHello = () => {
-  console.log('Hello, Babel');
-};
-
-sayHello();
+getWeather();
