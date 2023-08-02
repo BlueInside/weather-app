@@ -1,6 +1,7 @@
 import './styles/style.css';
 import { getWeather } from './weather';
 import showFormError from './formValidation';
+import updateWeatherInfo from './domController';
 
 const searchLocationForm = document.getElementById('searchLocationForm');
 
@@ -10,7 +11,7 @@ searchLocationForm.addEventListener('submit', (e) => {
   if (searchLocationForm.checkValidity()) {
     const locationInput = document.getElementById('location');
     const location = locationInput.value.trim();
-    getWeather(location).then((response) => console.log(response));
+    getWeather(location).then((response) => updateWeatherInfo(response));
   }
 });
 getWeather().then((response) => console.log(response));

@@ -15,6 +15,8 @@ function getUserLocation() {
 
 function filterAndTransformForecast(day) {
   const { sunrise, sunset, moon_phase: moonPhase } = day.astro;
+  // eslint-disable-next-line prefer-destructuring
+  const date = day.date;
   const {
     maxtemp_c: maxTempC,
     mintemp_c: minTempC,
@@ -24,6 +26,7 @@ function filterAndTransformForecast(day) {
   } = day.day;
   const { text: weatherDescription, icon } = day.day.condition;
   const weatherInfo = {
+    date,
     sunrise,
     sunset,
     maxTempC,
