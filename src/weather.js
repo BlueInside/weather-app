@@ -1,5 +1,14 @@
 let threeDaysForecastData = [];
+const loadingContainer = document.getElementById('loadingContainer');
 
+function showLoading() {
+  loadingContainer.classList.remove('hidden');
+}
+
+// Function to hide the loading component
+function hideLoading() {
+  loadingContainer.classList.add('hidden');
+}
 function getUserLocation() {
   return new Promise((resolve, reject) => {
     if ('geolocation' in navigator) {
@@ -47,6 +56,7 @@ function getWeather(location) {
   let url = '';
   threeDaysForecastData = [];
   // try to get user location if no location provided
+  showLoading();
   return getUserLocation()
     .then((response) => {
       latitude = response.coords.latitude;
@@ -73,9 +83,11 @@ function getWeather(location) {
       const { country, name, region } = response.location;
       const forecast = response.forecast.forecastday;
       forecast.forEach(filterAndTransformForecast);
+      hideLoading();
       return { country, name, region, threeDaysForecastData };
     })
     .catch((error) => {
+      hideLoading();
       console.error('Failed to fetch:', error.message);
     });
 }
