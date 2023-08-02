@@ -17,7 +17,6 @@ function handleClick() {
 }
 export default function updateWeatherInfo(weatherData) {
   if (!weatherData) {
-    console.log('hello');
     const weatherDisplay = document.getElementById('weatherInfo');
     weatherDisplay.className = `hidden`;
     return;

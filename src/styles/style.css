@@ -4,8 +4,19 @@ body {
   font-size: 1.3rem;
   text-align: center;
 }
+h1 {
+  font-weight: bold;
+  text-align: center;
+  color: #333; /* Choose your preferred color */
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
 #message {
   color: #ffc107;
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 #weatherInfo {
   display: flex;
@@ -74,6 +85,36 @@ body {
 
 #scale:active {
   background-color: #3e8e41;
+}
+
+#searchBtn {
+  background-color: #45a049; /* Choose your preferred background color */
+  color: #fff; /* Choose your preferred text color */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#searchBtn:hover {
+  background-color: #3e8e41; /* Choose your preferred background color on hover */
+}
+
+input[type='text'] {
+  padding: 11px;
+  font-size: 14px;
+  border: 2px solid #ccc; /* Choose your preferred border color */
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type='text']:focus {
+  border-color: #007bff; /* Choose your preferred border color on focus */
+  box-shadow: 0 0 5px #007bff; /* Optional: Add a subtle box shadow on focus */
 }
 
 /* here */
