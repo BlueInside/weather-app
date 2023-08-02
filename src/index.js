@@ -10,7 +10,7 @@ searchLocationForm.addEventListener('submit', (e) => {
   if (searchLocationForm.checkValidity()) {
     const locationInput = document.getElementById('location');
     const location = locationInput.value.trim();
-    getWeather(location);
+    getWeather(location).then((response) => console.log(response));
   }
 });
-getWeather();
+getWeather().then((response) => console.log(response));

@@ -1,4 +1,3 @@
-const display = document.getElementById('weatherInfo');
 const errorDisplay = document.getElementById('message');
 export default function showFormError() {
   const locationInput = document.getElementById('location');
@@ -6,7 +5,6 @@ export default function showFormError() {
   const validPattern = /^[A-Za-z, -]+$/;
 
   if (location.length < 2) {
-    display.innerContent = '';
     errorDisplay.innerText = 'Please enter a valid location!';
     locationInput.setCustomValidity('location');
     return;
@@ -17,7 +15,6 @@ export default function showFormError() {
     return;
   }
   if (location.length > 28) {
-    display.innerContent = '';
     errorDisplay.innerText = 'Max 28 characters!';
     locationInput.setCustomValidity('characters');
     return;

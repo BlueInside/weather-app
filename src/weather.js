@@ -44,7 +44,7 @@ function getWeather(location) {
   let url = '';
   threeDaysForecastData = [];
   // try to get user location if no location provided
-  getUserLocation()
+  return getUserLocation()
     .then((response) => {
       latitude = response.coords.latitude;
       longitude = response.coords.longitude;
@@ -70,15 +70,11 @@ function getWeather(location) {
       const { country, name, region } = response.location;
       const forecast = response.forecast.forecastday;
       forecast.forEach(filterAndTransformForecast);
-      console.log(country, name, region);
-      console.log(threeDaysForecastData);
-      console.log(response);
+      return { country, name, region, threeDaysForecastData };
     })
     .catch((error) => {
       console.error('Failed to fetch:', error.message);
     });
-  if (threeDaysForecastData > 0) return threeDaysForecastData;
-  return undefined;
 }
 
 export { getWeather, getUserLocation };
