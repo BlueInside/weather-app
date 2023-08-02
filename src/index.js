@@ -14,4 +14,4 @@ searchLocationForm.addEventListener('submit', (e) => {
     getWeather(location).then((response) => updateWeatherInfo(response));
   }
 });
-getWeather().then((response) => console.log(response));
+getWeather().then((response) => updateWeatherInfo(response));

@@ -1,5 +1,8 @@
 export default function updateWeatherInfo(weatherData) {
-  if (!weatherData) return;
+  if (!weatherData) {
+    return;
+  }
+  document.getElementById('weatherInfo').className = 'visible';
   document.getElementById('country').textContent = weatherData.country;
   document.getElementById('name').textContent = weatherData.name;
   document.getElementById('region').textContent =
