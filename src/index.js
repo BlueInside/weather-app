@@ -13,3 +13,4 @@ searchLocationForm.addEventListener('submit', (e) => {
     getWeather(location);
   }
 });
+getWeather();

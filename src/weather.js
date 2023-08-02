@@ -56,7 +56,8 @@ function getWeather(location) {
     .then(() => {
       if (location) {
         url = `http://api.weatherapi.com/v1/forecast.json?key=a92646fcecc1405c93e80851233007&q=${location}&days=3`;
-      } else throw new Error('No location provided');
+      }
+      if (!url) throw new Error('No location provided');
       return fetch(url, { mode: 'cors' });
     })
     .then((response) => {
