@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Cast</title>
+  </head>
+  <body>
+    <button id="scale">C | F</button>
+    <div class="menu">
+      <h1>WeatherHub</h1>
+    <div>
+      <form action="#" id="searchLocationForm" novalidate>
+        <label for="location">Enter Location:</label>
+        <input
+          type="text"
+          id="location"
+          placeholder="Enter a city name"
+          required
+          maxlength="28"
+          title="Please enter only letteres, spaces, commas, and hyphens."
+        />
+        <button id="searchBtn" type="submit">Search</button>
+      </form>
+    </div>
+    <div id="errorDisplay">
+      <p id="message">Please enter location to check up the weather for next 3 days!</p>
+    </div>
+    </div>
+    
+    <div id="weatherInfo" class="weather-info hidden">
+      <div class="location-info">
+        <div class="location-title"><h2>Location</h2></div>
+        <div class="location-description">
+          <p>Country:  <span id="country"></span></p>
+          <p>Name:  <span id="name"></span></p>
+          <p>Region:  <span id="region"></span></p>
+        </div>
+      </div>
+      <div class="weather-cards">
+        <div class="weather-card">
+          <h3>  <span id="date1"></span></h3>
+          <img src="" alt="Weather Icon" id="icon1">
+          <p>  <b><span id="sunrise1"></b></span></p>
+          <p>  <b><span id="sunset1"></b></span></p>
+          <p> <b><span id="maxTempC1"></b></span></p>
+          <p> <b><span id="minTempC1"></span></b></p>
+          <p> <b><span id="weatherDescription1"></b></span></p>
+        </div>
+        <div class="weather-card">
+          <h3> <span id="date2"></span></h3>
+          <img src="" alt="Weather Icon" id="icon2">
+          <p>  <b><span id="sunrise2"></span></b></p>
+          <p>  <b><span id="sunset2"></span></b></p>
+          <p> <b><span id="maxTempC2"></span></b></p>
+          <p> <b><span id="minTempC2"></span></b></p>
+          <p> <b><span id="weatherDescription2"></span></b></p>
+        </div>
+        <div class="weather-card">
+          <h3>  <span id="date3"></span></h3>
+          <img src="" alt="Weather Icon" id="icon3">
+          <p>  <b><span id="sunrise3"></span></b></p>
+          <p>  <b><span id="sunset3"></span></b></p>
+          <p> <b><span id="maxTempC3"></span></b></p>
+          <p> <b><span id="minTempC3"></span></b></p>
+          <p> <b><span id="weatherDescription3"></b></span></p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="loadingContainer" class="hidden">
+      <div id="loadingSpinner"></div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
