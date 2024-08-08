@@ -61,14 +61,14 @@ function getWeather(location) {
     .then((response) => {
       latitude = response.coords.latitude;
       longitude = response.coords.longitude;
-      url = `http://api.weatherapi.com/v1/forecast.json?key=a92646fcecc1405c93e80851233007&q=${latitude},${longitude}&days=3`;
+      url = `https://api.weatherapi.com/v1/forecast.json?key=a92646fcecc1405c93e80851233007&q=${latitude},${longitude}&days=3`;
     })
     .catch((error) => {
       console.error('Error getting user location:', error.message);
     })
     .then(() => {
       if (location) {
-        url = `http://api.weatherapi.com/v1/forecast.json?key=a92646fcecc1405c93e80851233007&q=${location}&days=3`;
+        url = `https://api.weatherapi.com/v1/forecast.json?key=a92646fcecc1405c93e80851233007&q=${location}&days=3`;
       }
       if (!url) throw new Error('No location provided');
       return fetch(url, { mode: 'cors' });
